@@ -1,7 +1,27 @@
+<!--
 <div class="container mt-4">
-  <h1>Fundamentos de Angular</h1>
-  <!--<app-calculadora></app-calculadora>-->
-  <app-directivas></app-directivas>
+  <h1>Comunicación entre componentes</h1>
+  <h3>Decoradores @Input y @Output</h3>
+  <p>@Input: Es la comunicación entre un componente <span>Padre y un Hijo</span></p>
+  <p>@Output: Es la comunicación entre un componente <span>Hijo y su Padre</span></p>
+
+  <div class="m-5" style="background-color: lemonchiffon">
+    <app-form-deporte (deporteCreado)="agregar($event)"></app-form-deporte>
+  </div>
+
+  <app-deporte
+    *ngFor="let deporteElemento of deportes; let i = index"
+    [deporte] = "deporteElemento"
+    [indice] = "i"
+  >
+
+  </app-deporte>
+
 </div>
+-->
 
+<app-menu></app-menu>
 
+<div class="container mt-5">
+  <router-outlet></router-outlet>
+</div>

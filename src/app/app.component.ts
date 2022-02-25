@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  deportes: string[] = ["Fútbol", "Baloncesto", "Tenis"];
+
+  agregar(nombreDeporte: string){
+    this.deportes.push(nombreDeporte);
+  }
+
 }
